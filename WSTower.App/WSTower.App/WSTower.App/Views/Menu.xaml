@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WSTower.App.Menu"
+             MasterBehavior="Popover">
+
+    <MasterDetailPage.Master>
+        <ContentPage Padding="15" BackgroundColor="Gray" Title="Menu" >
+            <StackLayout Margin="5,30,5,5">
+                <Label Text="Menu"></Label>
+                <!--<Button Text="Principal" BackgroundColor="#178AC0" Clicked="BtnPrincipal_Clicked">
+                </Button>-->
+                <Button Text="Login"     BackgroundColor="#178AC0" Clicked="BtnLogin_Clicked" >
+                </Button>
+                <Button Text="Sobre"     BackgroundColor="#178AC0" Clicked="BtnSobre_Clicked" >
+                </Button>
+                <!--<Button Text="Sair"      BackgroundColor="#178AC0" Clicked="BtnSair_Clicked" >
+                </Button>-->
+            </StackLayout>
+
+        </ContentPage>
+
+
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Padding="15">
+            <StackLayout Margin="5,30,5,5">
+                <Label Text="Menu"></Label>
+            </StackLayout>
+
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

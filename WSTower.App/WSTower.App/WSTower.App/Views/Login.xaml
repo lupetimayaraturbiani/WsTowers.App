@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WSTower.App.Login"
+             Title="Login">
+        
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.jpg"
+                   WidthRequest="300"
+                   Margin="0,30,0,30"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            
+            <StackLayout>
+                <Label 
+                    Text="Login"
+                    FontSize="18"
+                    Margin="7,0,0,0"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    />
+
+                <Entry x:Name="emailEntry"
+                       Placeholder="Ex: exemplo.ex@email.com"
+                       TextChanged="User_TextChanged"
+                       />
+                
+                <Label 
+                    Text="Senha"
+                    FontSize="18"
+                    Margin="7,0,0,0"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand"
+                    />
+                
+                <Entry x:Name="passwordEntry"
+                       Placeholder="********"
+                       IsPassword="True"
+                       />
+
+                <Button Text="Entrar" Clicked="Entrar_Clicked"
+                        TextColor="White"
+                        BackgroundColor="#126B9D"
+                        HorizontalOptions="Center"
+                        Margin="0,7,0,0"
+                        WidthRequest="150"
+                        CornerRadius="8"
+                        />
+
+                <!--<ListView x:Name="listView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Email}"
+                                      Detail="{Binding Password}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+                <Button Text="Cadastre-se" Clicked="Cadastrar_Clicked" 
+                        TextColor="#126B9D"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="EndAndExpand"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

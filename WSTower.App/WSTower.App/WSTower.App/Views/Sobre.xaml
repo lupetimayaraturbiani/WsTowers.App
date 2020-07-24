@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WSTower.App.Sobre">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.jpg"
+                   WidthRequest="300"
+                   Margin="0,30,0,30"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            
+            <StackLayout>
+                <Label Text=" Somos uma empresa administradora de ambientes.Temos comprometimento total com nossos clientes, visando sempre atender da melhor maneira possível, para saber mais sobre nosso trabalho visite nosso web site!"
+                       FontSize="19"
+                       Margin="10,0,0,30"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                       />
+
+                <Label BackgroundColor="#178AC0"
+                       HeightRequest="5"
+                       Margin="85,0,88,0"
+                       HorizontalOptions="Fill"
+                       />
+
+                <Label Text="Sede: São Paulo,Brasil
+                       Tipo: Engenharia           
+                       Web site: wstowers.org"
+                       FontSize="17"
+                       Margin="90,3,0,3"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="EndAndExpand"
+                       />
+
+                <Label BackgroundColor="#178AC0"
+                       HeightRequest="5"
+                       Margin="85,0,88,0"
+                       HorizontalOptions="Fill"
+                       />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WSTower.App.Cadastro"
+             Title="Cadastro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.jpg"
+                   WidthRequest="300"
+                   Margin="0,15,0,11"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            
+            <StackLayout>
+                <Label Text="Nome Completo"
+                       FontSize="18"
+                       Margin="7,0,0,0"
+                       TextColor="Black"
+                       HorizontalOptions="Start"
+                       />
+                
+                <Entry x:Name="nameEntry"
+                       Placeholder="Ex: Maria de Jesus"
+                       />
+                
+                <Label Text="Email"
+                       FontSize="18"
+                       Margin="7,0,0,0"
+                       TextColor="Black"
+                       HorizontalOptions="Start"
+                       />
+
+                <Entry x:Name="emailEntry"
+                       Placeholder="Ex: exemplo.ex@email.com"
+                       />
+                
+                <Label Text="Senha"
+                       FontSize="18"
+                       Margin="7,0,0,0"
+                       TextColor="Black"
+                       HorizontalOptions="Start"
+                       />
+
+                <Entry x:Name="passwordEntry"
+                       Placeholder="********"
+                       IsPassword="True"
+                       />
+
+                <StackLayout Orientation="Horizontal" Margin="0,8,0,0">
+                    <Label Text="Gravar senha?" 
+                           TextColor="Black" FontSize="16"
+                           Margin="7,0,0,0"
+                           />
+                    <Switch x:Name="SalvaSenha_Toggle" IsToggled="True" HorizontalOptions="Start"/>
+                </StackLayout>
+
+                <Button Text ="Cadastrar" Clicked="Cadastrar_Clicked"
+                        TextColor="White"
+                        BackgroundColor="#126B9D"
+                        HorizontalOptions="Center"
+                        Margin="0,7,0,0"
+                        WidthRequest="150"
+                        CornerRadius="8"
+                        />
+
+                <ListView x:Name="listView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Email}"
+                                      Detail="{Binding Password}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
